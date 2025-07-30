@@ -16,9 +16,6 @@ RUN apt-get update && apt-get install -y \
 RUN curl -sS https://get.symfony.com/cli/installer | bash && \
     mv /root/.symfony*/bin/symfony /usr/local/bin/symfony
 
-#Composer
-RUN  composer install
-
 # Instala Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
@@ -27,9 +24,6 @@ WORKDIR /var/www/html
 
 # Copia los archivos de la app al contenedor
 COPY . .
-
-# Ejecuta composer install automáticamente
-RUN composer install
 
 # Expone el puerto 9000
 EXPOSE 9000

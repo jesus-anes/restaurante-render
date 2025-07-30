@@ -26,4 +26,5 @@ docker-compose up --build -d
 
 # Accede al contenedor para ejecutar migraciones
 docker exec -it symfony_app bash
-php bin/console doctrine:migrations:migrate
+composer install
+php bin/console doctrine:migrations:migrate --no-interaction
