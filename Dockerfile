@@ -28,5 +28,10 @@ COPY . .
 # Expone el puerto 9000
 EXPOSE 9000
 
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+
+ENTRYPOINT ["/entrypoint.sh"]
+
 # Comando por defecto: servidor PHP embebido
 CMD ["php", "-S", "0.0.0.0:9000", "-t", "public"]
