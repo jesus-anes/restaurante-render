@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Restaurantes API</title>
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+
+<body>
+
+    <a href="/api/doc" class="doc-button" target="_blank">📘 Ver Documentación</a>
+
+    <div class="container">
+        <h1>Gestión de Restaurantes</h1>
+
+        <h2>Crear nuevo restaurante</h2>
+        <input id="nombre" placeholder="Nombre">
+        <input id="direccion" placeholder="Dirección">
+        <input id="telefono" placeholder="Teléfono">
+        <button onclick="crearRestaurante()">Crear</button>
+
+        <h2>Lista de restaurantes</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Dirección</th>
+                    <th>Teléfono</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="lista-restaurantes"></tbody>
+        </table>
+    </div>
+
+    <script src="/js/index.js"></script>
+</body>
+
+</html>
