@@ -12,10 +12,12 @@ RUN apt-get update && apt-get install -y \
     libzip-dev \
     && docker-php-ext-install pdo pdo_mysql zip
 
-#Symfony/cli y composer
+#Symfony/cli
 RUN curl -sS https://get.symfony.com/cli/installer | bash && \
-    composer install \
     mv /root/.symfony*/bin/symfony /usr/local/bin/symfony
+
+#Composer
+RUN  composer install
 
 # Instala Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
