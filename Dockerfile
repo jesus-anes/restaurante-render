@@ -25,6 +25,9 @@ WORKDIR /var/www/html
 # Copia los archivos de la app al contenedor
 COPY . .
 
+# Ejecuta composer install automáticamente
+RUN composer install
+
 # Expone el puerto 9000
 EXPOSE 9000
 
