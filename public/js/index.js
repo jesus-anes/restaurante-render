@@ -22,6 +22,41 @@ async function cargarRestaurantes() {
     });
 }
 
+async function buscarRestaurantePorId() {
+    const id = document.getElementById('buscar-id').value.trim();
+    const resultadoDiv = document.getElementById('resultado-busqueda');
+    resultadoDiv.innerHTML = '';
+
+    if (!id) {
+        resultadoDiv.innerHTML = '<p style="color: red;">Por favor, introduce un ID válido.</p>';
+        return;
+    }
+
+    try {
+        const response = await fetch(`/api/restaurantes/${id}`);
+        if (!response.ok) {
+            if (response.status === 404) {
+                resultadoDiv.innerHTML = `<p style="color: red;">Restaurante con ID ${id} no encontrado.</p>`;
+            } else {
+                resultadoDiv.innerHTML = `<p style="color: red;">Error al buscar el restaurante. Código: ${response.status}</p>`;
+            }
+            return;
+        }
+
+        const restaurante = await response.json();
+
+        resultadoDiv.innerHTML = `
+            <p><strong>ID:</strong> ${restaurante.id}</p>
+            <p><strong>Nombre:</strong> ${restaurante.nombre}</p>
+            <p><strong>Dirección:</strong> ${restaurante.direccion}</p>
+            <p><strong>Teléfono:</strong> ${restaurante.telefono}</p>
+        `;
+
+    } catch (error) {
+        resultadoDiv.innerHTML = `<p style="color: red;">Error en la conexión: ${error.message}</p>`;
+    }
+}
+
 async function crearRestaurante() {
     const nombre = document.getElementById('nombre').value.trim();
     const direccion = document.getElementById('direccion').value.trim();
