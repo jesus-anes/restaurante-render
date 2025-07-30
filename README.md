@@ -25,5 +25,5 @@ cd proyecto-api
 docker-compose up --build -d
 
 # Accede al contenedor para ejecutar migraciones
-docker exec -it nombre-contenedor-app bash
+docker exec -it symfony_app bash
 php bin/console doctrine:migrations:migrate
