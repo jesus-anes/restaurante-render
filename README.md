@@ -18,12 +18,12 @@ Este proyecto es una API RESTful sencilla para gestionar restaurantes, desarroll
 ## 🔧 Instalación
 
 ```bash
-git clone https://github.com/tuusuario/proyecto-api.git
+git clone https://github.com/jesus-anes/restaurante-api.git
 cd proyecto-api
 
 # Inicia los contenedores
 docker-compose up --build -d
 
 # Accede al contenedor para ejecutar migraciones
-docker exec -it nombre-del-contenedor-app bash
+docker exec -it restaurante-api-app bash
 php bin/console doctrine:migrations:migrate
