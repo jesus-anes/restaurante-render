@@ -25,5 +25,5 @@ cd proyecto-api
 docker-compose up --build -d
 
 # Accede al contenedor para ejecutar migraciones
-docker exec -it restaurante-api-app bash
+docker exec -it nombre-contenedor-app bash
 php bin/console doctrine:migrations:migrate
