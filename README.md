@@ -19,12 +19,7 @@ Este proyecto es una API RESTful sencilla para gestionar restaurantes, desarroll
 
 ```bash
 git clone https://github.com/jesus-anes/restaurante-api.git
-cd proyecto-api
+cd restaurante-api
 
 # Inicia los contenedores
 docker-compose up --build -d
-
-# Accede al contenedor para ejecuta los siguientes comandos
-docker exec -it symfony_app bash
-composer install
-php bin/console doctrine:migrations:migrate --no-interaction
