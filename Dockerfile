@@ -10,7 +10,9 @@ RUN apt-get update && apt-get install -y \
     libonig-dev \
     libxml2-dev \
     libzip-dev \
-    && docker-php-ext-install pdo pdo_mysql zip
+    && docker-php-ext-install pdo pdo_pgsql 
+    
+##docker-php-ext-install pdo pdo_mysql zip
 
 #Symfony/cli
 RUN curl -sS https://get.symfony.com/cli/installer | bash && \
