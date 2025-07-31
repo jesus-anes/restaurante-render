@@ -1,4 +1,0 @@
-[2025-07-31T15:58:00.532079+02:00] http_client.INFO: Request: "GET https://cdn.jsdelivr.net/npm/@hotwired/stimulus@3.2.2/+esm" [] []
-[2025-07-31T15:58:00.536991+02:00] http_client.INFO: Request: "GET https://cdn.jsdelivr.net/npm/@hotwired/turbo@7.3.0/+esm" [] []
-[2025-07-31T15:58:00.820479+02:00] http_client.INFO: Response: "200 https://cdn.jsdelivr.net/npm/@hotwired/stimulus@3.2.2/+esm" 0.280684 seconds {"http_code":200,"url":"https://cdn.jsdelivr.net/npm/@hotwired/stimulus@3.2.2/+esm","total_time":0.280684} []
-[2025-07-31T15:58:00.852789+02:00] http_client.INFO: Response: "200 https://cdn.jsdelivr.net/npm/@hotwired/turbo@7.3.0/+esm" 0.31068 seconds {"http_code":200,"url":"https://cdn.jsdelivr.net/npm/@hotwired/turbo@7.3.0/+esm","total_time":0.31068} []
