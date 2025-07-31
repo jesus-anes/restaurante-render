@@ -1,6 +1,6 @@
 #!/bin/bash
 # Instalar dependencias
-#composer install
+composer install
 
 # Ejecutar las migraciones
 php bin/console doctrine:database:create --if-not-exists
